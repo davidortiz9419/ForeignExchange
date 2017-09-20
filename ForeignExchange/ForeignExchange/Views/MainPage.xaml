@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ForeignExchange"
+    x:Class="ForeignExchange.MainPage"
+    Title="Foreign Exchange"
+    BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="8">
+                <Label
+                    Text="Pesos:">
+                </Label>
+                <Entry
+                    Text="{Binding Pesos, Mode=TwoWay}"
+                    Keyboard="Numeric"
+                    Placeholder="Enter an amount in pesos...">
+                </Entry>
+                <Button
+                    Command="{Binding ConvertCommand, Mode=TwoWay}"
+                    HeightRequest="40"
+                    BorderRadius="20"
+                    Text="Convert">
+                </Button>
+                <Label
+                    Text="Dollars:">
+                </Label>
+                <Entry
+                    HorizontalTextAlignment="End"
+                    Text="{Binding Dollars, Mode=TwoWay}"
+                    IsEnabled="False"
+                    Placeholder="Value in dollars...">
+                </Entry>
+                <Label
+                    Text="Euros:">
+                </Label>
+                <Entry
+                    HorizontalTextAlignment="End"
+                    Text="{Binding Euros, Mode=TwoWay}"
+                    IsEnabled="False"
+                    Placeholder="Value in euros...">
+                </Entry>
+                <Label
+                    Text="Pounds:">
+                </Label>
+                <Entry
+                    HorizontalTextAlignment="End"
+                    Text="{Binding Pounds, Mode=TwoWay}"
+                    IsEnabled="False"
+                    Placeholder="Value in pounds...">
+                </Entry>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
